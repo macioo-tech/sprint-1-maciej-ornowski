@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praca Domowa API</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="header">
+        <form id="search-form">
+            <h4>Filtry:</h4>
+            <input type="text" id="search-input" placeholder="Wyszukaj po nazwie...">
+            <input type="radio" id="alive" name="type" value="Alive" checked>
+            <label for="alive">Żywy</label>
+            <input type="radio" id="dead" name="type" value="Dead">
+            <label for="dead">Martwy</label>
+            <input type="radio" id="unknown" name="type" value="unknown">
+            <label for="unknown">Nieznany</label>
+        </form>
+    </div>
+    <div id="results" class="results"></div>
+    <div class="add-form">
+        <h4>Stwórz postać</h4>
+        <input type="text" id="post-name" placeholder="Nazwa postaci">
+        <input type="text" id="post-species" placeholder="Rasa">    
+        <select name="post-status" id="post-status">
+            <option value="Alive">Źywy</option>
+            <option value="Dead">Martwy</option>
+            <option value="unknown">Nieznany</option>
+        </select>
+        <button onclick="addItem()">Stwórz</button>
+    </div>       
+    <div class="footer">
+        <button id="prev-page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M15 6l-6 6l6 6" />
+            </svg>
+        </button>
+        <button id="next-page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 6l6 6l-6 6" />
+            </svg>
+        </button>
+        <button id="post" class="buttons">Init DBs</button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
